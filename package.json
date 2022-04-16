@@ -1,0 +1,60 @@
+{
+  "name": "whosings",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "start": "react-native start",
+    "test": "jest --passWithNoTests",
+    "coverage": "yarn test --coverage --watchAll=false --coverageReporters=text --coverageReporters=lcov",
+    "lint:script": "eslint . --ext .js,.ts,.jsx,.tsx --ignore-pattern=modules --resolve-plugins-relative-to .",
+    "lint": "yarn lint:script",
+    "lint-fix": "yarn lint --fix"
+  },
+  "dependencies": {
+    "react": "17.0.2",
+    "react-native": "0.68.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.9",
+    "@babel/runtime": "^7.12.5",
+    "@react-native-community/eslint-config": "^2.0.0",
+    "@types/jest": "^26.0.23",
+    "@types/react-native": "^0.67.3",
+    "@types/react-test-renderer": "^17.0.1",
+    "@typescript-eslint/eslint-plugin": "^5.17.0",
+    "@typescript-eslint/parser": "^5.17.0",
+    "babel-jest": "^26.6.3",
+    "eslint": "^7.32.0",
+    "eslint-config-react-app": "^7.0.1",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-config-standard-react": "^11.0.1",
+    "eslint-plugin-flowtype": "^8.0.3",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-react": "^7.29.4",
+    "eslint-plugin-react-hooks": "^4.4.0",
+    "husky": "^7.0.4",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^26.6.3",
+    "metro-react-native-babel-preset": "^0.67.0",
+    "prettier": "^2.6.2",
+    "react-test-renderer": "17.0.2",
+    "typescript": "^4.4.4"
+  },
+  "resolutions": {
+    "@types/react": "^17"
+  },
+  "jest": {
+    "preset": "react-native",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
+  }
+}
