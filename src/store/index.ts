@@ -3,10 +3,12 @@ import { CurriedGetDefaultMiddleware } from '@reduxjs/toolkit/dist/getDefaultMid
 import createDebugger from 'redux-flipper'
 import { persistReducer, persistStore } from 'redux-persist'
 
+import gameplay from './gameplay'
 import leaderboard, { leaderboardPersistConfig } from './leaderboard'
 
 const reducers = combineReducers({
-  leaderboard: persistReducer(leaderboardPersistConfig, leaderboard)
+  leaderboard: persistReducer(leaderboardPersistConfig, leaderboard),
+  gameplay
 })
 
 const middleware = (getDefaultMiddleware: CurriedGetDefaultMiddleware) => {
