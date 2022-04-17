@@ -1,11 +1,12 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit'
 import { CurriedGetDefaultMiddleware } from '@reduxjs/toolkit/dist/getDefaultMiddleware'
 import createDebugger from 'redux-flipper'
+import { persistReducer, persistStore } from 'redux-persist'
 
-import leaderboard from './leaderboard'
+import leaderboard, { leaderboardPersistConfig } from './leaderboard'
 
 const reducers = combineReducers({
-  leaderboard
+  leaderboard: persistReducer(leaderboardPersistConfig, leaderboard)
 })
 
 const middleware = (getDefaultMiddleware: CurriedGetDefaultMiddleware) => {
@@ -24,7 +25,9 @@ const store = configureStore({
   reducer: reducers
 })
 
-export { store, reducers }
+const persistor = persistStore(store)
+
+export { store, persistor, reducers }
 
 export type RootState = ReturnType<typeof store.getState>
 export type AppDispatch = typeof store.dispatch
