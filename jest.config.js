@@ -17,6 +17,6 @@ module.exports = {
     '!**/node_modules/**'
   ],
   transformIgnorePatterns: [
-    'node_modules/(?!(jest-)?react-native|@react-native|react-(native|universal|navigation)-(.*)|@react-native-community/(.*)|@react-navigation/(.*)|@rneui)'
+    'node_modules/(?!(jest-)?react-native|@react-native|react-(native|universal|navigation)-(.*)|@react-native-community/(.*)|@react-navigation/(.*)|@rneui(/base)?)'
   ]
 }
