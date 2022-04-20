@@ -1,9 +1,10 @@
 import React from 'react'
 
 import { Text } from '@rneui/base'
-import { Score } from '@store/leaderboard/leaderboard.types'
 import dayjs from 'dayjs'
 import { ListRenderItemInfo, View, StyleSheet } from 'react-native'
+
+import { Score } from '@/store/leaderboard/leaderboard.types'
 
 export default function leaderboardRenderer (
   { item, index }: ListRenderItemInfo<Score>

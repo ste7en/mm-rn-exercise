@@ -1,6 +1,5 @@
 import React from 'react'
 
-import { Routes } from '@navigators/routes'
 import { BottomTabScreenProps } from '@react-navigation/bottom-tabs'
 import { ParamListBase } from '@react-navigation/native'
 import { Text } from '@rneui/base'
@@ -9,6 +8,7 @@ import { SafeAreaView } from 'react-native-safe-area-context'
 import { useSelector } from 'react-redux'
 
 import leaderboardRenderer from './leaderboardRenderer'
+import { Routes } from '@/navigators/routes'
 import { selectLeaderboard } from '@/store/leaderboard/selectors'
 
 export default function LeaderboardScreen (

@@ -1,11 +1,11 @@
 import { createSlice } from '@reduxjs/toolkit'
-import { RootState } from '@store'
 
 import * as gameplayActions from './actions'
 import {
   GameNotStartedWithoutUser,
   GameplayState
 } from './gameplay.types'
+import { RootState } from '@/store'
 
 export const initialState: GameNotStartedWithoutUser = {
   kind: 'GameNotStartedWithoutUser'

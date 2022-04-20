@@ -1,7 +1,6 @@
-import { RootState } from '@store'
-
 import { Score } from '../leaderboard.types'
 import { selectByUserId, selectLeaderboard } from '../selectors'
+import { RootState } from '@/store'
 
 describe('leaderboard selectors', () => {
   it('should select leaderboard', () => {

@@ -1,6 +1,5 @@
-import { RootState } from '@store'
-
 import { Leaderboard } from './leaderboard.types'
+import { RootState } from '@/store'
 
 export const selectLeaderboard = (state: RootState) => state.leaderboard
 
