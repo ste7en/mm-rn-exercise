@@ -22,7 +22,7 @@ const middleware = (getDefaultMiddleware: CurriedGetDefaultMiddleware) => {
 }
 
 const store = configureStore({
-  devTools: !!__DEV__,
+  devTools: __DEV__,
   middleware,
   reducer: reducers
 })
