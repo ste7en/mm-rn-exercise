@@ -10,7 +10,7 @@ const QuizStack = createNativeStackNavigator()
 export default function QuizStackNavigator () {
   return (
     <QuizStack.Navigator>
-      <QuizStack.Screen name={'Login'} component={LoginScreen} key={Routes.LoginScreen} />
+      <QuizStack.Screen component={LoginScreen} key={Routes.LoginScreen} name={'Login'} />
     </QuizStack.Navigator>
   )
 }

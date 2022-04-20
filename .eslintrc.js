@@ -17,6 +17,7 @@ module.exports = {
         'no-shadow': 'off',
         'no-undef': 'off',
         'no-use-before-define': 'off',
+        'react/jsx-sort-props': 2,
         'import/order': [
           'error',
           {
