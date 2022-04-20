@@ -13,17 +13,21 @@ import React from 'react'
 import { NavigationContainer } from '@react-navigation/native'
 import { StatusBar } from 'react-native'
 import { SafeAreaProvider } from 'react-native-safe-area-context'
+import { Provider } from 'react-redux'
 
 import MainTabNavigator from '@/navigators/Tab/MainTabNavigator'
+import { store } from '@/store'
 
 const App = () => {
   return (
-    <NavigationContainer>
-      <StatusBar barStyle={'dark-content'} />
-      <SafeAreaProvider>
-        <MainTabNavigator />
-      </SafeAreaProvider>
-    </NavigationContainer>
+    <Provider store={store}>
+      <NavigationContainer>
+        <StatusBar barStyle={'dark-content'} />
+        <SafeAreaProvider>
+          <MainTabNavigator />
+        </SafeAreaProvider>
+      </NavigationContainer>
+    </Provider>
   )
 }
 
