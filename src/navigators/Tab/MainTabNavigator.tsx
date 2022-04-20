@@ -12,9 +12,9 @@ const MainTab = createBottomTabNavigator()
 export default function MainTabNavigator () {
   return (
     <MainTab.Navigator>
-      <MainTab.Screen name={Routes.QuizStack} component={QuizStack} />
-      <MainTab.Screen name={Routes.UserScreen} component={UserScreen} />
-      <MainTab.Screen name={Routes.LeaderboardScreen} component={LeaderboardScreen} />
+      <MainTab.Screen name={'Quiz'} component={QuizStack} key={Routes.QuizStack} />
+      <MainTab.Screen name={'User'} component={UserScreen} key={Routes.UserScreen} />
+      <MainTab.Screen name={'Leaderboard'} component={LeaderboardScreen} key={Routes.LeaderboardScreen} />
     </MainTab.Navigator>
   )
 }
