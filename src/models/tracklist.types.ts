@@ -1,5 +1,5 @@
-import { Track } from './track.type'
+import { TrackResponseType } from './track.type'
 
 export interface TrackList {
-  'track_list': Track[]
+  'track_list': TrackResponseType[]
 }

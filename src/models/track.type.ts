@@ -22,3 +22,7 @@ export interface Track {
     'music_genre_list': string[]
   }
 }
+
+export type TrackResponseType = Readonly<{
+  track?: Track
+}>
