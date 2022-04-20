@@ -7,7 +7,7 @@ import { RootState } from '@/store'
 import { GameplayState } from '@/store/gameplay/gameplay.types'
 import { Leaderboard } from '@/store/leaderboard/leaderboard.types'
 import { selectByUserId } from '@/store/leaderboard/selectors'
-import { wrappedRender } from '@/utils/e2e'
+import { fireEvent, wrappedRender } from '@/utils/e2e'
 
 const leaderboard: Leaderboard = {
   scores: [
@@ -49,5 +49,12 @@ describe('UserScreen tests', () => {
       expect(queryByText(score.points.toString())).not.toBeNull()
       expect(queryAllByText(dayjs(score.timestamp).format(dateFormat))).not.toBe([])
     })
+  })
+
+  it('logout button', async () => {
+    const { render: { queryByText, getByText } } = wrappedRender(<UserScreen />, { preloadedState })
+    expect(queryByText('Logout')).not.toBeNull()
+    fireEvent.press(getByText('Logout'))
+    expect(queryByText('Please log in to view your profile')).not.toBeNull()
   })
 })
