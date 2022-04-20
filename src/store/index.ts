@@ -5,9 +5,11 @@ import { persistReducer, persistStore } from 'redux-persist'
 
 import gameplay from './gameplay'
 import leaderboard, { leaderboardPersistConfig } from './leaderboard'
+import musixmatch, { musixmatchPersistConfig } from './musixmatch'
 
 const reducers = combineReducers({
   leaderboard: persistReducer(leaderboardPersistConfig, leaderboard),
+  musixmatch: persistReducer(musixmatchPersistConfig, musixmatch),
   gameplay
 })
 
