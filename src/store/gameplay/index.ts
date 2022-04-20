@@ -26,6 +26,6 @@ export const {
   logout
 } = gameplayState.actions
 
-export const selectGameplay = (state: RootState) => state.gameplay
+export const selectGameplay = (state: RootState) => state.gameplay as GameplayState
 
 export default gameplayState.reducer
