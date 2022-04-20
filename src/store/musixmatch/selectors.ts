@@ -1,3 +1,4 @@
+import { RootState } from '..'
 import { MMClientState, MMInitialized, MMUninitialized } from './musixmatch.types'
 
 export const isUninitialized = (
@@ -11,3 +12,5 @@ export const isInitialized = (
 export const isLoading = (
   state: MMClientState
 ): boolean => state.isLoading
+
+export const selectMusixmatch = (state: RootState) => state.musixmatch as MMClientState
