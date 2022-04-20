@@ -18,7 +18,6 @@ export async function loadLyricsForTopSongsAsync () {
           .track_list
           .filter(({ track: t }) => (t && (t?.track_id || t?.commontrack_id) && t?.track_name && t?.artist_name))
           .map(async ({ track }) => {
-            console.log('Downloading for track ', track?.track_name)
             // @ts-expect-error already checked above
             const { data: lyrics } = await getLyricsFromTrack(track)
 
