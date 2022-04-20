@@ -7,7 +7,7 @@ import { FlatList, StyleSheet } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { useSelector } from 'react-redux'
 
-import leaderboardRenderer from './leaderboardRenderer'
+import leaderboardRenderer from '../utils/leaderboardRenderer'
 import { Routes } from '@/navigators/routes'
 import { selectLeaderboard } from '@/store/leaderboard/selectors'
 
