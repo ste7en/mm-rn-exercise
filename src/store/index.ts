@@ -12,7 +12,9 @@ const reducers = combineReducers({
 })
 
 const middleware = (getDefaultMiddleware: CurriedGetDefaultMiddleware) => {
-  const middlewares = getDefaultMiddleware()
+  const middlewares = getDefaultMiddleware({
+    serializableCheck: false
+  })
 
   if (__DEV__ && !process.env.JEST_WORKER_ID) {
     middlewares.push(createDebugger())
