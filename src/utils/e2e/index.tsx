@@ -86,8 +86,5 @@ function wrappedRender<S = RootState, A extends AnyAction = AnyAction> (
   return { render: rtlRender(ui, { wrapper: Wrapper, ...renderOptions }), store, navigation }
 }
 
-function dbg (cb: () => void): void { (process && process.env.JEST_WORKER_ID) || cb() }
-function isDbg (): boolean { return !!(process && process.env.JEST_WORKER_ID) }
-
 export * from '@testing-library/react-native'
-export { wrappedRender, DEFAULT_NOCK_HOST, dbg, isDbg }
+export { wrappedRender, DEFAULT_NOCK_HOST }
