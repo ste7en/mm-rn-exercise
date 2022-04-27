@@ -21,7 +21,8 @@ export default function ReadyScreen (
 
   useEffect(() => {
     if (!isInitialized(musixmatch) && !isLoading(musixmatch)) { loadLyricsForTopSongsAsync() }
-  }, [musixmatch])
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   const play = () => {
     dispatch(gameStart())
